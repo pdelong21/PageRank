@@ -1,5 +1,7 @@
 PATRICK DELONG cs435 2200 mp
 
+PROGRAMS WERE WRITTEN IN JAVA 10 IN UBUNTU
+
 OPTION 3 - PAGERANK
 TO RUN PROGRAM DO THE FOLLOWING EXCLUDING QUOTATIONS...
 
@@ -26,5 +28,5 @@ DEBUG REPORT FOR PAGERANK:
     gave more or less than the amount of arguments it should have. If they didn't give 3 ARGS than it returns with a
     message of how to type on the command line to get it to run.
 
-    One thing WILL CRASH MY PROGRAM is if you have a blank line on the top of your text file or after the last line
+    One thing that WILL CRASH MY PROGRAM is if you have a blank line on the top of your text file or after the last line
     because then it will not make the AdjacencyList correctly and WILL CRASH.
