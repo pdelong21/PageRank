@@ -1,7 +1,7 @@
+/* PATRICK DELONG cs435 2200 mp */
 import java.io.*;
-import java.math.RoundingMode;
 
-public class PageRank {
+public class PageRank_2200 {
     static float d = 0.85f;
     static Float n;
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class PageRank {
         File file = new File(args[2]);
 
         // Generate the graph from the file
-        LL_pgd22[] AdjList = GenerateAdjList(file);
+        LL_2200[] AdjList = GenerateAdjList(file);
         n =(float)AdjList.length;
 
         // CHECK THE INITIAL RANK
@@ -37,35 +37,66 @@ public class PageRank {
                 list.Rank = 1f / (float)AdjList.length;
             }
         }
-        for (int i = 0; i < runs; i++){
-            AdjList = Rank(AdjList);
+        else if (initRank == -2) {
+            for (var list : AdjList
+            ) {
+                list.Rank = 1f / (float)Math.sqrt(AdjList.length);
+            }
         }
 
-        /*
-        int count = 0;
-        for (var list:AdjList
-             ) {
-            System.out.print(count);
-            System.out.print(", ");
-            System.out.printf(String.format("%.6f", list.Rank));
-            System.out.print(" --> ");
-            list.PrintList();
-            System.out.println();
-            count ++;
-        }
-        */
+        // If runs is more than 0 i.e fixed then run that many times
+        if(runs > 0){
+            for (int i = 0; i < runs; i++){
+                if(i==0){
+                    System.out.print("Base\t:\t" + i + "\t:\t");
+                    PrintIteration(AdjList);
+                    continue;
+                }
 
+                AdjList = Rank(AdjList);
+                System.out.print("Iter\t:\t" + i + "\t:\t");
+                PrintIteration(AdjList);
+            }
+        }
+        // If runs == 0, then run until EACH vertex hits the fixed errorate
+        else if(runs == 0){
+            // Run until the difference between the last iteration and the current iteration is less than the errorate
+            int iter = 0;
+            while(true){
+                if(iter==0){
+                    System.out.print("Base\t:\t" + iter + "\t:\t");
+                    PrintIteration(AdjList);
+                }
+                iter++;
+                int count = 0;
+                float[] prev = new float[AdjList.length];
+                for (int i = 0; i < AdjList.length; i++) {
+                    prev[i] = AdjList[i].Rank;
+                }
+                AdjList = Rank(AdjList);
+                System.out.print("Iter\t:\t" + iter + "\t:\t");
+                PrintIteration(AdjList);
+                for (int i = 0; i < AdjList.length; i++) {
+                    if((prev[i]-AdjList[i].Rank) < fixerrorate){
+                        count ++;
+                    } else break;
+                }
+                if (count == AdjList.length){
+                    break;
+                }
+            }
+        }
     }
-    private static LL_pgd22[] GenerateAdjList(File file){
+    private static LL_2200[] GenerateAdjList(File file){
         try{
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = reader.readLine(); // Read line by line
             String[] split_line = line.split(" "); // Split the string by a space,
                                                          // our first occurrence is the size of the NxN graph
-            LL_pgd22[] AdjList = new LL_pgd22[Integer.parseInt(split_line[0])];
+            LL_2200[] AdjList = new LL_2200[Integer.parseInt(split_line[0])];
             // Initialize the linked lists
             for (int i = 0; i < AdjList.length; i++){
-                AdjList[i] = new LL_pgd22();
+                AdjList[i] = new LL_2200();
             }
             while((line = reader.readLine()) != null){
                 split_line = line.split(" ");
@@ -84,7 +115,7 @@ public class PageRank {
         return null;
     }
 
-    private static LL_pgd22[] Rank(LL_pgd22[] AdjList){
+    private static LL_2200[] Rank(LL_2200[] AdjList){
         float[] listRanks = new float[AdjList.length];
         // For every vertex
         for (int v = 0; v < AdjList.length; v++){
@@ -104,8 +135,8 @@ public class PageRank {
         return AdjList;
     }
 
-    private static float PR(LL_pgd22 list, float v){
-        Node_pgd22 current = list.head;
+    private static float PR(LL_2200 list, float v){
+        Node_2200 current = list.head;
         float rank = 0f;
         while (current != null){
             if (current.data == v){
@@ -117,6 +148,14 @@ public class PageRank {
             }
         }
         return rank;
+    }
+
+    private static void PrintIteration(LL_2200[] AdjList){
+        for (int i = 0; i < AdjList.length; i++){
+            System.out.print("P[ " + i + " ]=" + String.format("%.6f", AdjList[i].Rank) + "\t");
+        }
+        System.out.println();
+
     }
 
 }
