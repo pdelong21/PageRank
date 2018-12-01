@@ -1,23 +1,24 @@
 /* PATRICK DELONG cs435 2200 mp */
 
+// LinkedList implementation for holding data like node, next node, rank, and outdegree of the vertex
 public class LL_2200 {
-    Node_2200 head; // our head node
-    float Rank;
-    int OutDegree = 0;
+    NodePR_2200 head; // our head node
+    float Rank; // Our rank
+    int OutDegree = 0; // Our out degree which is counted whenever a node is inserted
 
     public void insert(float data){
-        Node_2200 current = new Node_2200(); // Allocate()
+        NodePR_2200 current = new NodePR_2200(); // Allocate()
         current.data = data; // Data is what was passed through
         current.next = null; // Initialize next to null;
 
-        // This would be our first object being inserted into the list
+        // Case of first object being inserted into the list
         if (head == null){
             head = current;
         }
-        // This would not be the first node and we are appending to the end of the list
+        // Case where it would not be the first node and we are appending to the end of the list
         else{
-            Node_2200 temp = head; // This is our temp node for traversing
-            // Goto the end of the linked list to insert node
+            NodePR_2200 temp = head; // This is our temp node for traversing
+            // Goto the end of the linked list to insert node, we know if node.next is null then we have reached the end
             while(temp.next != null){
                 temp = temp.next;
             }
@@ -25,9 +26,9 @@ public class LL_2200 {
         }
         OutDegree++; // Keep track of the out degree every time we insert a node
     }
-
+    // Used for debugging purposes to see if it inserted correctly
     public void PrintList(){
-        Node_2200 current = head;
+        NodePR_2200 current = head;
         if(current != null) {
             while (current.next != null) {
                 System.out.print(current.data);

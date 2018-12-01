@@ -2,18 +2,25 @@
 import java.io.*;
 
 public class PageRank_2200 {
-    static float d = 0.85f;
-    static Float n;
+    static float d = 0.85f; // constant
+    static Float n; // constant obtained after making the graph, its the number of vertices/webpages
     public static void main(String[] args) {
+        // Check to see if user gave us the correct amount of args to run, if it deviates than return with a message
+        if(args.length != 3){
+            System.out.println("Make sure you have arguments... Ex: java PROGRAM 0 -1 FILENAME");
+            return;
+        }
+        // This is taken from the command line
+        int runs = Integer.parseInt(args[0]); // How many times do we run?
+        float initRank =(float)Integer.parseInt(args[1]); // Whats the initial rank?
+        float fixerrorate = 0.000100f; // Constant
+        File file = new File(args[2]); // What file are we gathering the vertices from?
 
-        int runs = Integer.parseInt(args[0]);
-        float initRank =(float)Integer.parseInt(args[1]);
-        float fixerrorate = 0.000100f;
-        File file = new File(args[2]);
+
 
         // Generate the graph from the file
         LL_2200[] AdjList = GenerateAdjList(file);
-        n =(float)AdjList.length;
+        n =(float)AdjList.length; // Set n
 
         // CHECK THE INITIAL RANK
         // if initial rank is 0, initialize each list with a rank of 0
@@ -30,13 +37,14 @@ public class PageRank_2200 {
                 list.Rank = 1;
             }
         }
-        // if initial rank is -1, initialize each list with a rank of 1/n where n is the amount of edges
+        // if initial rank is -1, initialize each list with a rank of 1/n where n is the amount of vertices
         else if (initRank == -1) {
             for (var list : AdjList
             ) {
                 list.Rank = 1f / (float)AdjList.length;
             }
         }
+        // if initial rank is -1, initialize each list with a rank of 1/sqrt(n) where n is the amount of vertices
         else if (initRank == -2) {
             for (var list : AdjList
             ) {
@@ -136,7 +144,7 @@ public class PageRank_2200 {
     }
 
     private static float PR(LL_2200 list, float v){
-        Node_2200 current = list.head;
+        NodePR_2200 current = list.head;
         float rank = 0f;
         while (current != null){
             if (current.data == v){
