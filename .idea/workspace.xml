@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cab5da83-8146-4b54-8682-4aab851ee66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/mp_2200" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,12 @@
     <session id="988487117">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,13 +42,14 @@
           <entry key="README" value="2015" />
           <entry key="filename" value="57" />
           <entry key="java" value="8513" />
+          <entry key="mp_2200" value="300" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8513" />
-          <entry key="PLAIN_TEXT" value="2091" />
+          <entry key="PLAIN_TEXT" value="2391" />
         </counts>
       </usages-collector>
     </session>
@@ -57,17 +59,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PageRank_2200.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="116" selection-start-line="7" selection-start-column="116" selection-end-line="7" selection-end-column="116" />
+            <state>
+              <caret column="2" lean-forward="true" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/README">
+        <entry file="file://$PROJECT_DIR$/src/mp_2200">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="77" lean-forward="true" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+            <state relative-caret-position="150">
+              <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -76,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/filename">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -124,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/PageRank_2200.java" />
         <option value="$PROJECT_DIR$/src/filename" />
         <option value="$PROJECT_DIR$/src/README" />
+        <option value="$PROJECT_DIR$/src/mp_2200" />
       </list>
     </option>
   </component>
@@ -135,9 +138,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="330" />
-    <option name="y" value="105" />
+    <option name="y" value="27" />
     <option name="width" value="1438" />
-    <option name="height" value="1465" />
+    <option name="height" value="1413" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543683030472" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544003421335" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -200,7 +203,9 @@
       <workItem from="1542902949851" duration="1002000" />
       <workItem from="1542907330676" duration="9137000" />
       <workItem from="1543028591466" duration="14000" />
-      <workItem from="1543546785925" duration="35970000" />
+      <workItem from="1543546785925" duration="37184000" />
+      <workItem from="1543764219571" duration="211000" />
+      <workItem from="1543982019443" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="Finished PageRank">
       <created>1543634947209</created>
@@ -216,17 +221,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543683037114</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished PageRank">
+      <created>1543707172003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543707172003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46123000" />
+    <option name="totallyTimeSpent" value="49080000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="330" y="105" width="1438" height="1465" extended-state="0" />
+    <frame x="330" y="27" width="1438" height="1413" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23563218" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281609" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -266,10 +278,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Finished PageRank" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/NodePR_2200.java">
+    <entry file="file://$PROJECT_DIR$/src/PageRank_2200.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state>
+          <caret column="2" lean-forward="true" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -280,24 +292,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NodePR_2200.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/filename">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PageRank_2200.java">
+    <entry file="file://$PROJECT_DIR$/src/mp_2200">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="116" selection-start-line="7" selection-start-column="116" selection-end-line="7" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="77" lean-forward="true" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+        <state relative-caret-position="150">
+          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
         </state>
       </provider>
     </entry>
