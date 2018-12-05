@@ -10,6 +10,11 @@ TO RUN PROGRAM DO THE FOLLOWING EXCLUDING QUOTATIONS...
     "java henc_2200 filename" where filename is the file which you wish to compress
     "java hdec_2200 filename.huff" where filename is the file which has the .huff extension
 
+DEBUG REPORT FOR HUFFMAN
+
+    The huffman tree builds out correctly however something may be slightly wrong with the encoding and decoding. I was able to
+    compress very small text files and decode them however when they got large enough or I gave it a binary file it would
+    seem to compress it nicely, but on the decompression it would blow up over its original size.
 
 OPTION 3 - PAGERANK
 TO RUN PROGRAM DO THE FOLLOWING EXCLUDING QUOTATIONS...
